@@ -25,18 +25,22 @@ var alphabet = [ 'a',
   'y',
   'z' ];
 var displayString = '<p>';
+var logString = '';
 
 function stackLetters (theAlphabetArray) {
   for (var i = 0; i < theAlphabetArray.length; i += 1) {
-    console.log(theAlphabetArray[i]);
+    logString += theAlphabetArray[i];
     displayString += theAlphabetArray[i];
     if ( (i + 1) % 3 === 0) {
       displayString += " ";
+      logString += " ";
     }
+    console.log(logString);
     document.write(displayString + "</p>");
   }
-  displayString += "</p>";
+  // displayString += "</p>";
   return displayString;
 }
 
-document.write(stackLetters(alphabet));
+// document.write(stackLetters(alphabet));
+stackLetters(alphabet);
